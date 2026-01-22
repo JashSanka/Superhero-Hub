@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#intro{
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 10;
+    overflow: hidden;
+    transition: opacity 1.5s ease;
+}
+#intro video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+#intro.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#main{
+  background: url('marvelBG.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-size: 2rem;
+  opacity: 0; 
+  transition: opacity 1.5s ease;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  padding-top: 70px;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+#main h1{
+    margin: 0;
+}
+#main p{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+h1, p {
+    margin: 0;
+}
+
+.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  color: #fff;
+}
+
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.logo span {
+    background-color: orange;
+    border-radius: 2px;
+    color: #000;
+}
+
+.nav-links {  
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+header {
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  /* animation setup */
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+  pointer-events: none;
+}
+
+/* when header becomes visible */
+header.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+#av{
+  background-color: red;
+  height: 50vh;
+  width: auto;
+}
